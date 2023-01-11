@@ -2,6 +2,7 @@
 This project will demonstrate every specific details to convert a gradle project to maven
 
 # Steps for conversion
+This is initial `build.gradle` file 
 - Add `apply plugin: 'maven-publish'` to `build.gradle`
 - Add `publishing` task in `build.gradle`
 - Run `gradle publish` and `gradle generatePomFileForCustomLibraryPublication`
