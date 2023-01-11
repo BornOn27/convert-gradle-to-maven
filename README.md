@@ -2,8 +2,8 @@
 This project will demonstrate every specific details to convert a `gradle` project to `maven`
 
 # Steps for conversion
-- Generate pom.xml
-- Modify pom.xml
+- Generate `pom.xml`
+- Modify `pom.xml`
 - Add missing tags
 - Build the maven project
 
@@ -12,11 +12,11 @@ This project will demonstrate every specific details to convert a `gradle` proje
 This is initial [`build.gradle`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/migration-resources/original-project-build.gradle) file 
 - Add [`apply plugin: 'maven-publish'`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/build.gradle#L7) to `build.gradle`
 - Add [`publishing`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/build.gradle#L23-L31) task in `build.gradle`
-- Run `gradle publish` and `gradle generatePomFileForCustomLibraryPublication`
-	- if `gradle` is not installed, Run from terminal at project root `./gradlew publish` and 
-	- `./gradlew generatePomFileForCustomLibraryPublication` 
+- Run `gradle publish` and `gradle generatePomFileForCustomLibraryPublication` (if `gradle` is not installed, refer [Terminal Commands](https://github.com/BornOn27/convert-gradle-to-maven#gradle))
 - Copy `build/publications/customLibrary/pom-default.xml` and move  to project root as **`pom.xml`** 
 - Add [`mvnw`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/mvnw) , [`mvnw.cmd`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/mvnw.cmd) & [`.mvn`](https://github.com/BornOn27/convert-gradle-to-maven/tree/main/.mvn/wrapper) to project root as these files to help `run maven commands` via terminal
+
+
 
 ## Modify `pom.xml`
 
