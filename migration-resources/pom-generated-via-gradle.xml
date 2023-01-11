@@ -4,56 +4,7 @@
   <groupId>com.flodeus</groupId>
   <artifactId>convert-gradle-to-maven</artifactId>
   <version>0.0.1-maven</version>
-  <packaging>jar</packaging>
-
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.5.5</version>
-    <relativePath/>
-  </parent>
-  <properties>
-    <java.version>1.8</java.version>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
-  </properties>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <scope>runtime</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>spring-boot-starter-logging</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-    </dependency>
-  </dependencies>
+  <packaging>pom</packaging>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -65,10 +16,4 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  <repositories>
-    <repository>
-      <id>maven.central</id>
-      <url>https://repo.maven.apache.org/maven2/</url>
-    </repository>
-  </repositories>
 </project>
