@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.5'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+}
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+repositories {
+    mavenCentral()
+}
+
+group = 'com.flodeus'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-devtools:2.5.5'
+}
+
+publishing {
+    publications {
+        customLibrary(MavenPublication) {
+            groupId = 'com.flodeus'
+            artifactId = 'convert-gradle-to-maven'
+            version = '0.0.1-maven'
+        }
+    }
+}
