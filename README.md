@@ -2,12 +2,14 @@
 This project will demonstrate every specific details to convert a gradle project to maven
 
 # Steps for conversion
-This is initial `build.gradle` file 
-- Add `apply plugin: 'maven-publish'` to `build.gradle`
-- Add `publishing` task in `build.gradle`
+This is initial [`build.gradle`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/migration-resources/build.gradle) file 
+- Add [`apply plugin: 'maven-publish'`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/build.gradle#L7) to `build.gradle`
+- Add [`publishing`](https://github.com/BornOn27/convert-gradle-to-maven/blob/main/build.gradle#L23-L31) task in `build.gradle`
 - Run `gradle publish` and `gradle generatePomFileForCustomLibraryPublication`
-- Copy pom.xml file from `build/publications/customLibrary/pom-default.xml` to project root
-- Copy `mvnw` , `mvnw.cmd` & `.mvn` to project root
+	- if `gradle` is not installed, use `./gradlew publish` and 
+	- `./gradlew generatePomFileForCustomLibraryPublication` from project root
+- Copy `build/publications/customLibrary/pom-default.xml` and move  to project root as **`pom.xml`** 
+- Add `mvnw` , `mvnw.cmd` & `.mvn` to project root
 
 # Modify `pom.xml`
 When gradle task publishes the pom.xml it misses the many spring-boot dependency which
